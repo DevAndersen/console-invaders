@@ -1,6 +1,6 @@
 # Console Invaders
 
-![Demo image](./.github/image.png)
+![Demo footage](./.github/animation.gif)
 
 ## Description
 
