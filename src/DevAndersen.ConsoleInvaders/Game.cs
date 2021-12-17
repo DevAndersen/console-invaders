@@ -126,9 +126,6 @@ namespace DevAndersen.ConsoleInvaders
                     var readKey = Console.ReadKey(true);
                     switch (readKey.Key)
                     {
-                        case ConsoleKey.X:
-                            Player.Damage(1000);
-                            break;
                         case ConsoleKey.LeftArrow:
                             Player.Move(-1, 0);
                             break;

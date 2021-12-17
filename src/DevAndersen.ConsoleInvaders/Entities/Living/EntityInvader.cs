@@ -24,12 +24,12 @@ namespace DevAndersen.ConsoleInvaders.Entities.Living
         {
             if (game.GameTick % 3 == 0)
             {
-                if (PosY >= game.DefeatLine)
+                if (PosY >= Game.DefeatLine)
                 {
                     game.EndGame();
                 }
 
-                if (!Move(1 * (goingRight ? 1 : -1), 0))
+                if (!Move(goingRight ? 1 : -1, 0))
                 {
                     goingRight = !goingRight;
                     Move(0, 1);
@@ -51,9 +51,9 @@ namespace DevAndersen.ConsoleInvaders.Entities.Living
 
         public override Func<int, ConsoleChar>? GetDeathAnimation() => (frame) => frame switch
         {
-            0 => new ConsoleChar('O', 0xff8800),
-            1 => new ConsoleChar('*', 0xaa4400),
-            2 => new ConsoleChar('•', 0x660000),
+            <3 => new ConsoleChar('O', 0xff8800),
+            <6 => new ConsoleChar('*', 0xaa4400),
+            <9 => new ConsoleChar('•', 0x660000),
             _ => default
         };
     }
